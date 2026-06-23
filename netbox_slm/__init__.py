@@ -16,7 +16,7 @@ limitations under the License.
 
 from netbox.plugins import PluginConfig
 
-__version__ = "1.8.4"
+__version__ = "1.8.5"
 
 
 class SLMConfig(PluginConfig):
@@ -27,7 +27,7 @@ class SLMConfig(PluginConfig):
     author = "ICTU"
     author_email = "open-source-projects@ictu.nl"
     base_url = "slm"
-    min_version = "4.6.0"
+    min_version = "4.5.0"
     required_settings = []
     default_settings = {
         "top_level_menu": True,

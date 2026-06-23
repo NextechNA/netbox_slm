@@ -2,6 +2,13 @@
 
 ## [Unreleased]
 
+## [1.8.5] - 2026-06-23
+
+### Changed
+
+* Lowered min_version to 4.5.0 so the plugin loads on both NetBox 4.5.x (Django 5.2) and 4.6.x (Django 6.0). The 4.6 compatibility fixes from 1.8.4 are valid on both.
+
+
 ## [1.8.4] - 2026-06-23
 
 ### Fixed
