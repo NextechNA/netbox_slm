@@ -2,6 +2,17 @@
 
 ## [Unreleased]
 
+## [1.8.4] - 2026-06-23
+
+### Fixed
+
+* Compatibility with NetBox 4.6 / Django 6.0: replaced the removed `CheckConstraint(check=...)` keyword with `condition=...` in `SoftwareProductInstallation` and migration 0007. The constraint is unchanged; no schema migration is generated.
+* Compatibility with Django 6.0: `SoftwareProduct.get_installation_count()` and `SoftwareProductVersion.get_installation_count()` called `format_html()` with a pre-interpolated f-string and no format arguments, which Django 6.0 rejects (`TypeError: args or kwargs must be provided`). Switched to parameterized `format_html("<a href='{}?{}'>{}</a>", ...)`.
+
+### Added
+
+* `min_version = "4.6.0"` on the plugin config so installation on an unsupported NetBox core fails with a clear warning rather than an import-time crash.
+
 ## [1.8.3](https://github.com/ICTU/netbox_slm/releases/tag/1.8.3) - 2025-12-18
 
 ### Fixed

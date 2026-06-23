@@ -40,7 +40,7 @@ class SoftwareProduct(NetBoxModel):
         query_string = urlencode(dict(software_product_id=self.pk))
         search_target = reverse("plugins:netbox_slm:softwareproductinstallation_list")
         # Can be composed directly with reverse(query=) in Django 5.2, see https://code.djangoproject.com/ticket/25582
-        return format_html(f"<a href='{search_target}?{query_string}'>{count}</a>") if count else "0"
+        return format_html("<a href='{}?{}'>{}</a>", search_target, query_string, count) if count else "0"
 
 
 class SoftwareReleaseTypes(models.TextChoices):
@@ -86,7 +86,7 @@ class SoftwareProductVersion(NetBoxModel):
         query_string = urlencode(dict(version_id=self.pk))
         search_target = reverse("plugins:netbox_slm:softwareproductinstallation_list")
         # Can be composed directly with reverse(query=) in Django 5.2, see https://code.djangoproject.com/ticket/25582
-        return format_html(f"<a href='{search_target}?{query_string}'>{count}</a>") if count else "0"
+        return format_html("<a href='{}?{}'>{}</a>", search_target, query_string, count) if count else "0"
 
 
 class SoftwareProductInstallation(NetBoxModel):
@@ -109,7 +109,7 @@ class SoftwareProductInstallation(NetBoxModel):
         constraints = [
             models.CheckConstraint(
                 name="%(app_label)s_%(class)s_platform",
-                check=(
+                condition=(
                     models.Q(device__isnull=False, virtualmachine__isnull=True, cluster__isnull=True)
                     | models.Q(device__isnull=True, virtualmachine__isnull=False, cluster__isnull=True)
                     | models.Q(device__isnull=True, virtualmachine__isnull=True, cluster__isnull=False)
