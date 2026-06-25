@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "netbox-slm"
 dynamic = ["version"]
-description = "Software Lifecycle Management Netbox Plugin"
+description = "DEPRECATED — use the official netbox-slm package from ICTU (pip install netbox-slm)"
 readme = "README.md"
 requires-python = ">=3.11"
 license = { text = "Apache-2.0" }
@@ -13,7 +13,7 @@ authors = [
     {name = "ICTU", email = "open-source-projects@ictu.nl"},
 ]
 classifiers = [
-    "Development Status :: 5 - Production/Stable",
+    "Development Status :: 7 - Inactive",
     "Environment :: Plugins",
     "Environment :: Web Environment",
     "Framework :: Django",
@@ -49,6 +49,7 @@ ci = [
 Homepage = "https://github.com/ICTU/netbox_slm/"
 Changelog = "https://github.com/ICTU/netbox_slm/blob/master/CHANGELOG.md"
 Issues = "https://github.com/ICTU/netbox_slm/issues/"
+"Official Package" = "https://pypi.org/project/netbox-slm/"
 
 [tool.setuptools.dynamic]
 version = {attr = "netbox_slm.__version__"}

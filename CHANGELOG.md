@@ -2,6 +2,13 @@
 
 ## [Unreleased]
 
+## [1.9.0] - 2026-06-25
+
+### Deprecated
+
+* **This fork is deprecated.** Upstream [ICTU/netbox_slm](https://github.com/ICTU/netbox_slm) has resumed active development and published an official PyPI package (`netbox-slm`). Please migrate to the official package: `pip install netbox-slm`.
+* This repository will be archived. No further releases will be made from this fork.
+
 ## [1.8.5] - 2026-06-23
 
 ### Changed
