@@ -1,22 +1,29 @@
 # NetBox SLM
 
+> ## ⚠️ DEPRECATED — Use the official package
+>
+> **This fork is no longer maintained.** Upstream
+> [ICTU/netbox_slm](https://github.com/ICTU/netbox_slm) has resumed active development
+> and publishes the official `netbox-slm` package on PyPI.
+>
+> ### Migration
+>
+> ```bash
+> pip install --upgrade netbox-slm
+> ```
+>
+> Remove any git-based pins (e.g. `netbox-slm @ git+https://github.com/NextechNA/...`)
+> from your `local_requirements.txt` or `plugin_requirements.txt` and replace with:
+>
+> ```
+> netbox-slm>=1.9.0
+> ```
+>
+> No database migrations are required — the schema is unchanged.
+>
+> ---
+
 <p align="center"><i>NetBox SLM is a plugin for lifecycle management of software components, including versions and installations.</i></p>
-
-<div align="center">
-<a href="https://github.com/NextechNA/netbox_slm/releases"><img src="https://img.shields.io/github/v/release/NextechNA/netbox_slm" alt="Release"/></a>
-<a href="https://img.shields.io/badge/NetBox-4.5.x--4.6.x-2b9348"><img src="https://img.shields.io/badge/NetBox-4.5.x--4.6.x-2b9348" alt="NetBox Compatibility"/></a>
-<a href="https://github.com/NextechNA/netbox_slm/stargazers"><img src="https://img.shields.io/github/stars/NextechNA/netbox_slm" alt="Stars Badge"/></a>
-<a href="https://github.com/NextechNA/netbox_slm/network/members"><img src="https://img.shields.io/github/forks/NextechNA/netbox_slm" alt="Forks Badge"/></a>
-<a href="https://github.com/NextechNA/netbox_slm/pulls"><img src="https://img.shields.io/github/issues-pr/NextechNA/netbox_slm" alt="Pull Requests Badge"/></a>
-<a href="https://github.com/NextechNA/netbox_slm/issues"><img src="https://img.shields.io/github/issues/NextechNA/netbox_slm" alt="Issues Badge"/></a>
-<a href="https://github.com/NextechNA/netbox_slm/graphs/contributors"><img alt="GitHub contributors" src="https://img.shields.io/github/contributors/NextechNA/netbox_slm?color=2b9348"></a>
-<a href="https://github.com/NextechNA/netbox_slm/blob/master/LICENSE"><img src="https://img.shields.io/github/license/NextechNA/netbox_slm?color=2b9348" alt="License Badge"/></a>
-</div>
-
-> **Maintained fork.** This is a compatibility-maintained fork of
-> [ICTU/netbox_slm](https://github.com/ICTU/netbox_slm) (Apache-2.0), published by
-> NextechNA to keep the plugin working with current NetBox and Django releases while
-> upstream development is inactive. Original authorship and license are retained.
 
 ## Compatibility
 
